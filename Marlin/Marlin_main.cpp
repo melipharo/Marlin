@@ -8926,7 +8926,9 @@ void ok_to_send() {
     float distance = delta[A_AXIS];
     cartesian[Y_AXIS] = LOGICAL_Y_POSITION(DELTA_PRINTABLE_RADIUS);
     inverse_kinematics(cartesian);
-    return abs(distance - delta[A_AXIS]);
+    //round the distance to minimize the positioning error
+    //because the 0.01th fractions are not processed by steppers
+    return round(abs(distance - delta[A_AXIS])) + 1;
   }
 
   /**
