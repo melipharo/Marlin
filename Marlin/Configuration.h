@@ -302,11 +302,11 @@
   #define K1 0.95 //smoothing factor within the PID
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-  // Ultimaker
-  // Testing with Ult-O-Matic
-  #define  DEFAULT_Kp 22.2
-  #define  DEFAULT_Ki 1.08
-  #define  DEFAULT_Kd 114
+  // Ult-O-Matic
+  // From autotune
+  #define  DEFAULT_Kp 22.76
+  #define  DEFAULT_Ki 1.78
+  #define  DEFAULT_Kd 72.73
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
@@ -477,7 +477,8 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 200 }
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 200 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 700.304 } // AntiNexus blue stepper
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -705,7 +706,8 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+//#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true //AntiNexuS blue extruder
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -728,9 +730,9 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 200
+#define X_MAX_POS 190
 #define Y_MAX_POS 200
-#define Z_MAX_POS 200
+#define Z_MAX_POS 195
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 //TODO CHANGENE WARNING
@@ -940,7 +942,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (30*60) //it was 4*60!
+#define HOMING_FEEDRATE_Z  (20*60) //it was 4*60!
 
 //=============================================================================
 //============================= Additional Features ===========================
