@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(melipharo, Ult-O-Matic 2.0)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(melipharo, Ult-O-Marmatic)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -103,7 +103,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -112,7 +112,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 0
 
 /**
  * This setting determines the communication speed of the printer.
@@ -134,7 +134,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ult-O-Matic 2.0"
+#define CUSTOM_MACHINE_NAME "Ult-O-Marmatic"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -1081,7 +1081,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 180
+#define X_BED_SIZE 167
 #define Y_BED_SIZE 190
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -1904,9 +1904,9 @@
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 //play with timings for display
 //thx to https://reprap.org/forum/read.php?1,856122
-#define ST7920_DELAY_1 DELAY_NS(100)
-#define ST7920_DELAY_2 DELAY_NS(100)
-#define ST7920_DELAY_3 DELAY_NS(100)
+// #define ST7920_DELAY_1 DELAY_NS(100)
+// #define ST7920_DELAY_2 DELAY_NS(100)
+// #define ST7920_DELAY_3 DELAY_NS(100)
 
 //
 // ReprapWorld Graphical LCD
