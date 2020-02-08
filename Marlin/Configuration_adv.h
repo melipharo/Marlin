@@ -31,7 +31,7 @@
  * Basic settings can be found in Configuration.h
  *
  */
-#define CONFIGURATION_ADV_H_VERSION 20200121
+#define CONFIGURATION_ADV_H_VERSION 20200208
 
 // @section temperature
 
