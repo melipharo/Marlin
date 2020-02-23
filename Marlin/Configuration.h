@@ -36,7 +36,7 @@
  * Advanced settings can be found in Configuration_adv.h
  *
  */
-#define CONFIGURATION_H_VERSION 20200208
+#define CONFIGURATION_H_VERSION 20200223
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -476,17 +476,11 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Ult-O-Matic e3dv6
+  //Ult-O-Matic 2.0 kraken head (left)
   //from autotune (Check with M301)
-  // #define DEFAULT_Kp 29.28
-  // #define DEFAULT_Ki 3.28
-  // #define DEFAULT_Kd 65.37
-
-  //Ult-O-Matick chimera head (left)
-  //from autotune (Check with M301)
-  #define DEFAULT_Kp 20.16
-  #define DEFAULT_Ki 1.40
-  #define DEFAULT_Kd 72.68
+  #define DEFAULT_Kp 23.63
+  #define DEFAULT_Ki 1.83
+  #define DEFAULT_Kd 76.45
 
   // Ultimaker
   // #define DEFAULT_Kp 22.2
@@ -837,7 +831,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 /**
  * Z_MIN_PROBE_PIN
@@ -950,7 +944,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 42, 20, 2 }
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
@@ -962,7 +956,7 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 3)
 
 /**
  * Multiple Probing
@@ -973,8 +967,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 2
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -990,7 +984,7 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   15 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
@@ -1082,7 +1076,7 @@
 
 // The size of the print bed
 #define X_BED_SIZE 167
-#define Y_BED_SIZE 190
+#define Y_BED_SIZE 179
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
