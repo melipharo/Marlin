@@ -36,7 +36,7 @@
  * Advanced settings can be found in Configuration_adv.h
  *
  */
-#define CONFIGURATION_H_VERSION 20200223
+#define CONFIGURATION_H_VERSION 20200306
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -130,11 +130,11 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_GEN_L
+  #define MOTHERBOARD BOARD_MKS_GEN_L_V2
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ult-O-Matic 2.0"
+#define CUSTOM_MACHINE_NAME "Ult-O-Matic 2.1"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
